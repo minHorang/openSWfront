@@ -1,5 +1,3 @@
-// router.jsx
-import { createHashRouter } from 'react-router-dom';
 import App from './App';
 import Main from './pages/main/Main';
 import Login from './pages/Login/Login';
@@ -13,10 +11,13 @@ import SignupStep1 from './pages/SignUp/SignUpStep1';
 import SignupStep2 from './pages/SignUp/SignUpStep2';
 import AuctionAdd from './pages/MyPage/auctionadd';
 import AuctionCompleted from './pages/Auction/AuctionCompleted';
+import { createBrowserRouter } from 'react-router-dom';
 
-const router = createHashRouter([
+const basename = '/openSWfront'; // GitHub Pages에서 사용하는 base 경로
+
+const router = createBrowserRouter([
   {
-    path: '/',
+    path: basename + '/',
     element: <App />,
     children: [
       {
@@ -37,7 +38,7 @@ const router = createHashRouter([
       },
       {
         path: 'mypage',
-        element: <MyPageWrapper />, // MyPageWrapper로 교체
+        element: <MyPageWrapper />,
       },
       {
         path: 'mypage/auctionadd',
