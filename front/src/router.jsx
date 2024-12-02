@@ -1,5 +1,5 @@
 // router.jsx
-import { createBrowserRouter } from 'react-router-dom';
+import { createHashRouter } from 'react-router-dom';
 import App from './App';
 import Main from './pages/main/Main';
 import Login from './pages/Login/Login';
@@ -14,7 +14,7 @@ import SignupStep2 from './pages/SignUp/SignUpStep2';
 import AuctionAdd from './pages/MyPage/auctionadd';
 import AuctionCompleted from './pages/Auction/AuctionCompleted';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App />,
