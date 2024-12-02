@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './MyPage_personal.css';
+import './Mypage_personal.css';
 
 function MyPage_personal() {
   const [userData, setUserData] = useState({ id: '', email: '', image: null });
